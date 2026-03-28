@@ -1,0 +1,19 @@
+PROJECT REPORT
+
+Title: Apache Web Server Setup on Kali Linux
+
+Objective:
+To install and configure Apache server and host a web page.
+
+Steps:
+1. Installed Apache2 using apt
+2. Started Apache service
+3. Verified using browser (localhost)
+4. Edited /var/www/html/index.html
+5. Created custom webpage
+
+Result:
+Apache server successfully hosted a webpage on localhost.
+
+Conclusion:
+This project helped understand web server setup and deployment basics.
