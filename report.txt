@@ -1,53 +1,97 @@
 PROJECT REPORT
+Title: Setup and Deployment of Apache Web Server on Kali Linux
 
-Title:
-Setup and Deployment of Apache Web Server on Kali Linux
+1. Abstract
+This project covers the installation, configuration, and deployment of the Apache HTTP Server on a Kali Linux machine. The goal was to get a clear, hands-on understanding of how a web server works and to host a custom webpage locally. The work involved setting up Apache, adjusting the server configuration, replacing the default page with a custom-designed one, and applying HTML and CSS to improve its appearance. Git and GitHub were also used throughout the project to keep track of changes and maintain version history. Overall, the project gave a solid practical understanding of local web hosting and server architecture.
 
-Objective:
-The objective of this project is to install, configure, and deploy an Apache web server on Kali Linux and host a custom web page.
+2. Introduction
+A web server is essentially a system that handles requests and delivers web content to users, either over the internet or within a local network. Apache HTTP Server has been around for decades and remains one of the most popular open-source web servers out there, largely because of how flexible and reliable it is.
+Kali Linux is mostly known as a platform for security testing and ethical hacking, but it is also perfectly capable of running a web server. This project explores that side of Kali Linux — using it to configure and run Apache for local web development and testing purposes.
 
-Introduction:
-Apache HTTP Server is one of the most widely used open-source web servers. It allows users to host websites locally or on remote servers. This project focuses on understanding the setup and working of Apache on a Linux environment.
+3. Objectives
+The following were the main goals of this project:
 
-System Requirements:
-- Operating System: Kali Linux
-- Software: Apache2
-- Tools: Terminal, Web Browser
+Install and configure the Apache web server on Kali Linux
+Understand how a local web server processes and serves content
+Create and deploy a custom HTML webpage
+Apply CSS styling to improve the look and feel of the page
+Use Git and GitHub for version control and project management
 
-Implementation Steps:
 
-1. Installation:
-Apache server was installed using:
+4. System Requirements
+Hardware:
+
+A computer with at least 4GB of RAM
+Minimum 10GB of available storage
+
+Software:
+
+Kali Linux (Operating System)
+Apache2 (Web Server)
+Firefox or Chrome (Browser)
+Terminal, Git, and GitHub (Tools)
+
+
+5. Methodology
+5.1 Installing Apache
+Apache was installed through the terminal using the default package manager:
 sudo apt update
 sudo apt install apache2
-
-2. Starting the Server:
-The Apache service was started using:
+5.2 Starting the Service
+Once installed, the Apache service was started with:
 sudo systemctl start apache2
-
-3. Verification:
-The server was verified by opening:
+To check whether it was running correctly:
+systemctl status apache2
+5.3 Confirming the Installation
+To verify that everything was working, a browser was opened and directed to:
 http://localhost
-The default Apache page was displayed.
+Seeing the default Apache welcome page confirmed that the server had been installed and was running without issues.
+5.4 Replacing the Default Page
+The default page lives at /var/www/html/index.html. It was opened in the nano text editor:
+sudo nano /var/www/html/index.html
+The existing content was replaced with a custom HTML page that was written specifically for this project.
+5.5 Styling the Webpage
+CSS was added to make the page look cleaner and more presentable. Some of the changes included:
 
-4. Editing Web Content:
-The default file located at:
-/var/www/html/index.html
-was modified to create a custom webpage.
+A structured layout using container elements
+Better typography, font sizing, and spacing
+Background colors and styled sections
+Justified text alignment for a more polished look
 
-5. UI Enhancement:
-CSS styling was added to improve the appearance of the webpage.
+5.6 Version Control with Git and GitHub
+A local Git repository was set up inside the project folder:
+git init
+All files were staged and committed:
+git add .
+git commit -m "initial commit"
+The local repository was then linked to a remote GitHub repository:
+git remote add origin <repository_url>
+Finally, the project was pushed to GitHub:
+git push -u origin main
 
-6. Version Control:
-A GitHub repository was created and the project files were pushed using Git.
+6. Results
+The Apache server was successfully set up and running on Kali Linux. The custom webpage was accessible through the browser at localhost and displayed the designed content with proper styling applied. All project files were also pushed to GitHub and are available for reference or collaboration.
 
-Result:
-The Apache server successfully hosted a custom-designed webpage accessible via localhost.
+7. Discussion
+Working on this project gave real, hands-on experience with web server setup and management. It helped in understanding how Apache receives HTTP requests and responds with the appropriate content. Using Git and GitHub throughout made it easier to track progress and manage files systematically.
+A few challenges came up along the way — particularly around GitHub authentication and dealing with merge conflicts. Both were resolved by working through the proper commands and making sure the configuration was set up correctly.
 
-Conclusion:
-This project provided practical experience in setting up a web server, editing web content, and managing code using GitHub.
+8. Conclusion
+All the objectives set at the beginning of the project were met. Apache was successfully installed and configured, a custom webpage was hosted locally, and the entire project was version-controlled using Git and GitHub. This experience built a stronger understanding of how web servers work, how to manage files in a Linux environment, and how version control fits into a real project workflow. These are skills that directly apply to actual web hosting and deployment situations.
 
-Future Scope:
-- Add dynamic content using JavaScript
-- Deploy on a remote server
-- Use domain hosting
+9. Future Scope
+There are several directions this project could grow in:
+
+Adding interactive features using JavaScript
+Integrating a backend with PHP or Node.js
+Deploying the site on a live, publicly accessible server
+Setting up a custom domain
+Strengthening the server's security configuration
+
+
+10. References
+
+Apache Official Documentation: https://httpd.apache.org/docs/
+Kali Linux Documentation: https://www.kali.org/docs/
+Git Documentation: https://git-scm.com/docs
+GitHub Documentation: https://docs.github.com/
