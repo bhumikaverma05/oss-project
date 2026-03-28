@@ -1,19 +1,53 @@
 PROJECT REPORT
 
-Title: Apache Web Server Setup on Kali Linux
+Title:
+Setup and Deployment of Apache Web Server on Kali Linux
 
 Objective:
-To install and configure Apache server and host a web page.
+The objective of this project is to install, configure, and deploy an Apache web server on Kali Linux and host a custom web page.
 
-Steps:
-1. Installed Apache2 using apt
-2. Started Apache service
-3. Verified using browser (localhost)
-4. Edited /var/www/html/index.html
-5. Created custom webpage
+Introduction:
+Apache HTTP Server is one of the most widely used open-source web servers. It allows users to host websites locally or on remote servers. This project focuses on understanding the setup and working of Apache on a Linux environment.
+
+System Requirements:
+- Operating System: Kali Linux
+- Software: Apache2
+- Tools: Terminal, Web Browser
+
+Implementation Steps:
+
+1. Installation:
+Apache server was installed using:
+sudo apt update
+sudo apt install apache2
+
+2. Starting the Server:
+The Apache service was started using:
+sudo systemctl start apache2
+
+3. Verification:
+The server was verified by opening:
+http://localhost
+The default Apache page was displayed.
+
+4. Editing Web Content:
+The default file located at:
+/var/www/html/index.html
+was modified to create a custom webpage.
+
+5. UI Enhancement:
+CSS styling was added to improve the appearance of the webpage.
+
+6. Version Control:
+A GitHub repository was created and the project files were pushed using Git.
 
 Result:
-Apache server successfully hosted a webpage on localhost.
+The Apache server successfully hosted a custom-designed webpage accessible via localhost.
 
 Conclusion:
-This project helped understand web server setup and deployment basics.
+This project provided practical experience in setting up a web server, editing web content, and managing code using GitHub.
+
+Future Scope:
+- Add dynamic content using JavaScript
+- Deploy on a remote server
+- Use domain hosting
